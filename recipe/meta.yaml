@@ -8,9 +8,11 @@ package:
 source:
    url: https://github.com/fribidi/fribidi/releases/download/v{{ version }}/fribidi-{{ version }}.tar.bz2
    sha256: {{ sha256 }}
+   patches:
+     - meson-rpaths.patch
 
 build:
-  number: 1001
+  number: 1002
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('fribidi') }}
