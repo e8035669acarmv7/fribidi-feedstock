@@ -12,8 +12,7 @@ source:
      - meson-rpaths.patch
 
 build:
-  number: 1002
-  skip: true  # [win]
+  number: 1003
   run_exports:
     - {{ pin_subpackage('fribidi') }}
 
